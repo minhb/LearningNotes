@@ -7,23 +7,21 @@ Question:	>  command does ?
 ********************************************************************
 Tip 2: Don't Repeat Yourself
 	"Two for the Price of One" table
-	Compound Command	Equivalent in Longhand
-	C			c$
-	s			cl
-	S			^C
-	I			^i
-	A			$a
-	o			A<CR>
-	O			ko
-
-Question: What does C, S, I does ?
+	Compound Command	Equivalent in Longhand	Meaning
+	C			c$			change to end
+	s			cl			change left one character
+	S			^C			change line
+	I			^i			insert from begining
+	A			$a			append to end
+	o			A<CR>			open a line
+	O			ko			open a line above
 
 ********************************************************************
 Tip 3: Take One Step Back, Then Three Forward
 	f{char} 	finds character
 	;		repeat the last search that f{char} performed
 	s		cl: delete the character and enters Insert mode.
-			l: one character in forward direction(motion)
+			l: left direction(motion)
 
 ********************************************************************
 Tip 4: Act, Repeat, Reverse
@@ -38,6 +36,7 @@ Tip 4: Act, Repeat, Reverse
 	Execute a sequence of changes	qx{changes}q		@x	u
 
 Question: execute a sequence of changes ?
+Question: what is /t{char}
 
 ********************************************************************
 Tip 5: Find and Replace by Hand
@@ -53,3 +52,70 @@ Tip 6: Meet the Dot Formula
 		Tip 5, press n.
 
 ********************************************************************
+Tip 7: Pause with Your Brush Off the Page
+	Quote from book: "Just as painters spend a fraction of their time applying paint,
+			programmers spend a fraction of their time composing code. More time
+			is spent thinking, reading, and navigating from one part of a codebase to another."
+
+********************************************************************
+Tip 8: Chunk Your Undos
+	"From the moment we enter Insert mode until we return to Normal mode, everything we type (or delete) counts as a single change."
+	Thing goes a bit different if using arror key while in Insert mode!
+
+********************************************************************
+Tip 9: Compose Repeatable Changes
+	"Vim is optimized for repetition.. We have to be mindful of how we compose our changes"
+	Example: Delete a word with daw will be useful for repetition from dot command
+
+********************************************************************
+Tip 10: Use Counts to Do Simple Arithmetic
+	<C-a>	addition on number (default by 1)
+	<C-x>	substraction on number (default by 1)
+	
+	Example: Cursor on 5, press 10<C-a> return 15.
+		 Cursor on 5, press 10<C-x> return -5	
+	If the cursor is not positioned on a number, then these commands look ahead for a digit on the current line.
+	
+	:set nrformats= will cause Vim to treat all numerals as decimal.
+
+********************************************************************
+Tip 11: Don't Count If You Can Repeat
+	Using count when count is small (<=3), and chunk undo better
+	Using repeat is easy, don't have to count since counting is tedious. Can reverse if over-hit dot command.
+
+********************************************************************
+Tip 12: Combine and Conquer
+	Operator + Motion = Action
+
+	Example: d{motion} like: dl, daw, dap
+		 c{motion}
+		 y{motion}
+		 gU{motion like: gUl, gUaw, gUap
+	
+	"Vim's Operator Commands" table:
+		Trigger		Effect
+		c		Change
+		d		Delete
+		y		Yank into register
+		g~		Swap case
+		gu		Make lowercase
+		gU		Make uppercase
+		>		Shift right
+		<		Shift left
+		=		Autoindent
+		!		Filter {motion} lines through an external program
+
+	When an operator command is invoked in duplicate, it acts upon the current line. 
+		Example: dd, yy, gUgU or gUU
+
+	Vim is customizable :)
+		Custom Operator - work done by Tim Pope
+		Custom Motion - work done by Kana Natsuno
+
+Question: ! what is this ?
+Question: Try gg=G to indent the whole file
+		
+********************************************************************
+
+
+
