@@ -22,9 +22,8 @@ Question: What does C, S, I does ?
 Tip 3: Take One Step Back, Then Three Forward
 	f{char} 	finds character
 	;		repeat the last search that f{char} performed
-	s		cl: delete the character and enters Insert mode
-
-Question:	cl		change l* ? what is l?
+	s		cl: delete the character and enters Insert mode.
+			l: one character in forward direction(motion)
 
 ********************************************************************
 Tip 4: Act, Repeat, Reverse
