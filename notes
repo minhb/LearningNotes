@@ -90,7 +90,7 @@ Tip 12: Combine and Conquer
 	Example: d{motion} like: dl, daw, dap
 		 c{motion}
 		 y{motion}
-		 gU{motion like: gUl, gUaw, gUap
+		 gU{motion} like: gUl, gUaw, gUap
 	
 	"Vim's Operator Commands" table:
 		Trigger		Effect
@@ -116,6 +116,25 @@ Question: ! what is this ?
 Question: Try gg=G to indent the whole file
 		
 ********************************************************************
+Tip 13: Make Correction Instantly from Insert Mode
+	Keystrokes	Effect
+	<C-h>		Delete back one character (backspace)
+	<C-w>		Delete back one word
+	<C-u>		Delete back to start of line
 
+These keystrokes also used in Vim's command line as well as in the bash shell
 
+********************************************************************
+Tip 14: Get Back to Normal Mode
+	Keystrokes	Effect
+	<Esc>		Switch to Normal Mode
+	<C-[>		Switch to Normal Mode
+	<C-o>		Switch to Insert Normal Mode
+
+Meet Insert Normal Mode
+	"We can fire off a single command, after which we'll be returned to Insert mode immediately."
+	Example:
+		Type <C-o>zz to redraw the screen with the current line in the middle of the window.
+
+********************************************************************
 
