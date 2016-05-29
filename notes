@@ -137,4 +137,61 @@ Meet Insert Normal Mode
 		Type <C-o>zz to redraw the screen with the current line in the middle of the window.
 
 ********************************************************************
+Tip 15: Paste from a Register Without Leaving Insert Mode
+	Yanks a few words into the yank register and use <C-r>{register} to paste to.
+	<C-r><C-p>{register} insert text literally and fixes any unintended indentation.
+
+Question: What is <C-r><C-p>{register} ?
+
+********************************************************************
+Tip 16: Do Back-of-the Evelope Calculations in Place
+	Story: we often use back of the evelope for quick calculation.
+
+	Expression register vs. Yank register:
+		Yank register: 	
+			The delete and yank commands allow us to set the contents of a register.
+			The put command allows us to get the contents of a register.
+
+		Expression register:
+			allows us to perform calculations; address by = symbol -> accessed by <C-r>=
+			
+********************************************************************
+Tip 17: Insert Unusual Characters by Character Code
+	Keystrokes		Effect
+	<C-v>{123}		Insert character by decimal code
+	<C-v>u{1234}		Insert character by hexadecimal code
+	<C-v>{nondigit}		Insert nondigit literally
+	<C-k>{char1}{char2}	Insert character represented by {char1}{char2} digraph
+	ga			reveal the numeric code for any character
+	
+Idea: might be very useful to insert a catchy symbol in resume.
+
+********************************************************************
+Tip 18: Insert Unusual Characters by Digraph
+	Digraph: pair of characters that are easy to remember. For example:
+		Character	Keystrokes
+		¿ 		<C-k>?I 
+		½		<C-k>12
+		¾		<C-k>34	
+		©		<C-k>Co
+
+	:h digraph-table
+	:h digraphs-default
+
+********************************************************************
+Tip 19: Overwrite Existing Text with Replace Mode
+	"Replace Mode is identical to Insert mode, except that it overwrites existing text in the document"
+		Access: R 
+			<Insert> key to toggle between Insert mode and Replace mode
+	"Virtual Replace Mode treats the tabe character as though it considered of spaces"
+		
+	Keystrokes	Effect
+	r{char}		overwrite a single character (Replace mode) before switching back to Normal mode
+	gr{char}	overwrite a single character (Virtual Replace mode) before switching back to Normal mode 
+
+********************************************************************
+
+
+		
+
 
