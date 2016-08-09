@@ -190,8 +190,22 @@ Tip 19: Overwrite Existing Text with Replace Mode
 	gr{char}	overwrite a single character (Virtual Replace mode) before switching back to Normal mode 
 
 ********************************************************************
+Tip 20: Grok Visual Mode
+	Many command works on Normal mode also work the same in Visual Mode
+	h j k l		moving the cursor
+	f{char} ; ,	finding character
+	/ n N		search for pattern
 
+	The cursor moves -> change the bouds of the selection
+	Vim visual mode			     vs. 	Normal mode
 
+	making the selection 				trigger the change command c
+	then trigger the change command	 c		specify the range
+
+	viw		selecting the word
+	
+	?: Select mode
 		
+********************************************************************
 
 
