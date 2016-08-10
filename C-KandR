@@ -1,0 +1,15 @@
+4.3 External Variables
+-External variables are defined out side of any function -> available to many functions
+-Functions are always external
+-?How to define external variables and functions taht are visible only within a single source file
+-External variables used for communicating data between functions
+-? Why push(pop() - pop()) is wrong?
+
+4.4 Scope Rules
+-Declaration of an external variable        vs.         its definition
+  +announce the properties of a variable		 +causes storage to be set aside
+  +ex: 							 +ex:lines below appear outside of any function
+	extern int sp;							int sp;
+	extern double var[];						double val[MAXVAL];
+-TODO:re-read
+
