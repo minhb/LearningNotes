@@ -13,3 +13,11 @@
 	extern double var[];						double val[MAXVAL];
 -TODO:re-read
 
+4.5 Header Files
+-Reason: There is only one copy (for 'definition' and 'declaration') to get right and keep right as the program evolves
+
+?: getch.c should include calc.h ?
+
+4.6 Static Variables
+-'static' applies to an external variable or function to limit the scope of theat object to the rest of the source file being compiled
+-internal 'static' varibales provide private, permanent storage within a single function
