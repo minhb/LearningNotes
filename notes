@@ -208,5 +208,20 @@ Tip 20: Grok Visual Mode
 	?: Why finding a character is useful?
 		
 ********************************************************************
+Tip 21: Define a Visual Selection
+	Enter three visual submodes or get back to Normal mode:		Command
+		-character-wise visual mode				v
+		-line-wise visual mode					V
+		-block-wise visual mode					<C-v>
+	Re-selecting the last visual selection				gv
+	Switch to Normal mode						<Esc> or <C-[>
+	Go to other end of highlighted text				o
+	Moving cursor around word as the same to Normal mode		b,e,w
 
-
+********************************************************************
+Tip 22: Repeat Line-Wise Visual Commands
+	Using dot command to repeat the previous action on a line
+	
+	To make < and > commands work properly, configure Vim with
+		:set shiftwidth=4 softtabstop=4 expandtab
+	Don't use dot command with line-wise visual submode	
