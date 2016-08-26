@@ -222,6 +222,32 @@ Tip 21: Define a Visual Selection
 Tip 22: Repeat Line-Wise Visual Commands
 	Using dot command to repeat the previous action on a line
 	
-	To make < and > commands work properly, configure Vim with
+	To make < and > commands work properly, configure with
 		:set shiftwidth=4 softtabstop=4 expandtab
-	Don't use dot command with line-wise visual submode	
+	Don't use dot command with character-wise visual submode	
+		Reason: dot command acts on the same amount of text as was marked by the most
+		recent visual selection. However, it works fine with line-wise visual selections.
+
+********************************************************************
+Tip 23: Prefer Operators to Visual Commands where possible
+									Command
+	Visually select inside the tag					vit
+	Visually select a word						viw
+
+	Example: Make uppercase a word inside tag			
+		 	+Normal mode: gUit 				operator (gU), motion (it)
+			+Visual mode: vitU				selection (vit), command (U)
+	Visual mode: 	
+			+Not for dot command, except line-wise visual commands (reason in Tip 22)
+			+Better to go back to normal mode when working through a repetitive set of changes with dot command 
+
+********************************************************************
+Tip 24: Edit Tabular Data with Visual-Block Mode
+	Few things I learned from the example in the book:
+		+Visually select a column and delete it with x; repeat it with . => instant feedback when deleting a column multiple times
+		+r| after gv: to replace | with the visually selected column
+		+r- after V: to replace - with the whole line
+
+********************************************************************
+Tip 25: Change Columns of Text
+
