@@ -2,7 +2,10 @@
 #            cscope vs. ctags
 ##########################################
 
-
+Both: jump from function calls to their definitions
+Diff: 
+  ctags : omni completion
+  cscope: jump to any place where a function is called
 
 #########################################
 #            cscope
