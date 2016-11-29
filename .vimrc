@@ -2,8 +2,9 @@
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
-" Use the same symbols as TextMate for EOLs
-set listchars=eol:¬
+" Use the ¶ symbol(U+00B6) as in Microsoft Word for EOLs
+" Enter Ctrl+vu00B6 for this symbol
+set listchars=eol:¶
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
